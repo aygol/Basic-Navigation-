@@ -1,7 +1,4 @@
 package com.cbt.utilities;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
-import io.github.bonigarcia.wdm.WebDriverManagerException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -29,7 +26,7 @@ public class TitleVerification {
         getDriver("chrome");
         WebDriver driver=new ChromeDriver();
         String [] title= new String[urls.size()];
-        for(int i=0,j=1; i<urls.size();i++,j++) {
+        for(int i=0; i<urls.size();i++) {
             driver.get(urls.get(i));
             Thread.sleep(2000);
             title[i] = driver.getTitle();
